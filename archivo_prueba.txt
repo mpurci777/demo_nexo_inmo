@@ -1,1 +1,0 @@
-Este es un archivo de prueba para verificar el primer commit y push a GitHub.
