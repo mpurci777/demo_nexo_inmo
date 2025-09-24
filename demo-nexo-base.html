@@ -10,20 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<style>
-		flowise-fullchatbot {
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
-    min-width: 400px;
-    max-height: 480px;
-    min-height: 480px;
-    margin: 0;
-    box-sizing: border-box;
-    background: rgba(255,255,255,0.97);
-    box-shadow: 0 4px 32px rgba(0,91,235,0.18), 0 2px 8px rgba(255,111,0,0.10);
-    overflow: auto;
-}
-		}
+		/* Eliminado flowise-fullchatbot: no se usa en el layout actual */
 			:root {
 				--primary: #ff6f00;
 				--primary-dark: #d65f00;
@@ -54,39 +41,16 @@
 				font-family: 'Montserrat', sans-serif;
 				font-size: 2.1rem;
 				color: #fff;
-						color: #fff;
-						text-shadow: 0 1px 4px #fff, 0 0 2px #005beb;
 				text-align: center;
 				text-shadow: 0 2px 8px #ffb347;
 			}
-			h2 {
-				font-family: 'Montserrat', sans-serif;
-						text-shadow: 0 1px 4px #fff, 0 0 2px #000;
-				color: #fff;
-				margin-bottom: 10px;
-				text-shadow: 0 1px 4px #b3d1ff;
-			}
-			p {
-				text-align: center;
-				font-size: 1rem;
-			}
-			#nexo-chat {
-				width: 100%;
-				height: 300px;
-				border: none;
-				border-radius: 12px;
-				margin-bottom: 0;
-				box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-				transition: box-shadow 0.3s;
-			}
-			#nexo-chat:hover {
-				box-shadow: 0 4px 24px rgba(0,91,235,0.18);
-			}
+			/* Eliminado h2: no se usa en el layout actual */
+			/* Eliminado p: no se usa en el layout actual */
+			/* Eliminado #nexo-chat: no se usa en el layout actual */
 			.testimonial {
 				background: linear-gradient(90deg, #232a36 0%, #1a2230 100%);
 				border-radius: 16px;
-				box-shadow: 0 4px 16px rgba(255,111,0,0.10), 0 2px 8px rgba(0,91,235,0.10);
-					box-shadow: 0 4px 16px rgba(0,91,235,0.18);
+				box-shadow: 0 4px 16px rgba(0,91,235,0.18);
 				text-align: left;
 				display: flex;
 				align-items: center;
@@ -104,7 +68,7 @@
 				height: 64px;
 				border-radius: 50%;
 				object-fit: cover;
-				border: 2px solid var(--secondary);
+				border: 2px solid #005beb;
 			}
 			.testimonial-content {
 				flex: 1;
@@ -120,102 +84,37 @@
 				color: #fff;
 			}
 			.cta-btn {
-				animation: pulseGlow 1.8s infinite;
-@keyframes pulseGlow {
-	0% {
-		box-shadow: 0 4px 16px rgba(255,111,0,0.18), 0 2px 8px rgba(0,91,235,0.10);
-		filter: brightness(1);
-	}
-	50% {
-		box-shadow: 0 0 32px 8px #ffb347, 0 0 24px 8px #005beb;
-		filter: brightness(1.15);
-	}
-	100% {
-		box-shadow: 0 4px 16px rgba(255,111,0,0.18), 0 2px 8px rgba(0,91,235,0.10);
-		filter: brightness(1);
-	}
-}
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				gap: 12px;
-				position: relative;
-				background: linear-gradient(90deg, #ff6f00 0%, #ff6f00 100%);
-				transition: background 1.5s cubic-bezier(0.4,0,0.2,1);
+				background: linear-gradient(90deg, #005beb 0%, #ff6f00 100%);
 				border: none;
-				overflow: hidden;
-				z-index: 1;
-.cta-btn::before {
-	content: "";
-	position: absolute;
-	top: -30%;
-	left: -30%;
-	width: 160%;
-	height: 160%;
-	background: radial-gradient(circle at 30% 30%, #ff6f00 0%, transparent 60%), radial-gradient(circle at 70% 70%, #005beb 0%, transparent 60%);
-	filter: blur(18px);
-	opacity: 0.7;
-	z-index: 0;
-	transition: opacity 0.3s;
-	animation: blurPulse 2.5s infinite alternate;
-}
-.cta-btn span, .cta-btn i {
-	position: relative;
-	z-index: 1;
-}
-@keyframes blurPulse {
-	0% { opacity: 0.7; }
-	100% { opacity: 1; }
-}
-				color: #fff;
+				border-radius: 60px;
 				padding: 18px 38px;
-				border-radius: 50px;
-				text-decoration: none;
-				font-weight: 700;
+				font-size: 1.15em;
 				font-family: 'Montserrat', sans-serif;
-				font-size: 1.25em;
-				letter-spacing: 1px;
-				box-shadow: 0 4px 16px rgba(255,111,0,0.18), 0 2px 8px rgba(0,91,235,0.10);
-				transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
-				border: none;
-				border-bottom: 4px solid #005beb;
-				border-top: 4px solid #ff6f00;
-				text-shadow: 0 2px 8px #005beb, 0 0 2px #ff6f00;
+				font-weight: 700;
+				color: #fff;
+				text-decoration: none;
+				box-shadow: 0 4px 16px rgba(0,91,235,0.18);
+				transition: box-shadow 0.3s, transform 0.3s;
 			}
 			.cta-btn:hover {
-				background: linear-gradient(90deg, #ff6f00 0%, #ff6f00 100%);
-				box-shadow: 0 4px 16px rgba(0,91,235,0.18);
-				transform: scale(1.04);
+				box-shadow: 0 8px 32px rgba(0,91,235,0.25);
+				transform: scale(1.07);
 			}
 			.cta-btn i {
 				margin: 0;
 				font-size: 1.3em;
 			}
-			/* Botón fijo en mobile */
 			@media (max-width: 700px) {
-				.container {
-					max-width: 98vw;
-					padding: 18px 6vw;
-				}
-				#nexo-chat {
-					height: 220px;
-				}
 				.testimonial {
 					flex-direction: column;
 					align-items: flex-start;
 				}
 				.testimonial-img {
 					margin-bottom: 8px;
-				}
-			}
-			@media (max-width: 1100px) {
-				.main-flex {
-					flex-direction: column;
-					gap: 24px;
-					align-items: center;
-				}
-				.container {
-					margin: 0 auto;
 				}
 			}
 		</style>
@@ -226,13 +125,32 @@
 	<h1>Demo Chatbot Nexo Inmobiliaria</h1>
 	<div style="display: flex; flex-direction: row; justify-content: center; align-items: stretch; gap: 32px; width: 100%; max-width: 1200px;">
 		<div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-end; flex: 1;">
-			<a href="https://calendly.com/nexoinmobiliaria/agenda-una-llamada" target="_blank" class="cta-btn" style="margin-bottom: 24px; background: linear-gradient(90deg, #005beb 0%, #ff6f00 100%); box-shadow: 0 6px 24px rgba(0,91,235,0.18), 0 2px 8px rgba(255,111,0,0.10); border-radius: 60px; border: none; padding: 18px 38px; font-size: 1.15em; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 1.2px; color: #fff; transition: box-shadow 0.3s, transform 0.3s;">
-				<i class="fa fa-calendar-check" style="font-size: 1.3em; margin-right: 10px;"></i>
-				<span>Agenda una llamada</span>
+				<div style="display: flex; justify-content: center; width: 100%;">
+					<img src="https://raw.githubusercontent.com/mpurci777/IAFLOW-CODIGO/refs/heads/main/logo_transparent_background.png?token=GHSAT0AAAAAADKG4ZSNYUM4XP5WB7KVKEA22GUOJQQ" alt="Logo IAFLOW" style="width: 400px; height: auto; margin-bottom: 5px; filter: drop-shadow(0 2px 8px #ffb347);">
+				</div>
+			<div class="iaflow-intro" style="margin-top: 0px; font-size: 1.15em; margin-bottom: 0px;">
+				<span class="iaflow-intro-title">En IAFLOW creemos que la velocidad en la atención es clave en el mercado inmobiliario.</span>
+				<span class="iaflow-intro-text">Responder un mensaje hoy es como abrirle la puerta de tu local a un cliente. Si lo dejás esperando, va a buscar otro lugar donde lo reciban apenas surge su interés.<br><br>Con Nexo, tenés un portero digital disponible las 24 horas para recibir, calificar y guiar a cada lead. Así, vos te enfocás en lo más importante: cerrar ventas y satisfacer la demanda de tus nuevos clientes.</span>
+			</div>
+				<div style="display: flex; justify-content: center; width: 100%;">
+					<a href="https://calendar.app.google/X8tMYUbMENdVL3Hj6" target="_blank" class="cta-btn" style="margin-bottom: 120px;margin-top: 30px;background: linear-gradient(90deg, #005beb 0%, #ff6f00 100%); box-shadow: 0 6px 24px rgba(0,91,235,0.18), 0 2px 8px rgba(255,111,0,0.10); border-radius: 60px; border: none; padding: 18px 38px; font-size: 1.15em; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 1.2px; color: #fff; transition: box-shadow 0.3s, transform 0.3s;">
+						<i class="fa fa-calendar-check" style="font-size: 45px; margin-right: 10px;margin-top: 0px;"></i>
+						<span>Agenda una llamada</span>
+					</a>
+				</div>
+				<!-- Puedes modificar margin-top en el style del botón para moverlo más abajo -->
+				<!-- Puedes modificar el valor de margin-top para mover el botón más abajo -->
 			</a>
 		</div>
 			<div style="width: 400px; height: 480px; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 32px rgba(0,91,235,0.18); background: #fff;">
-				<iframe src="https://flowiseai-railway-production-3de9.up.railway.app/chatbot/e6703f06-6e20-4320-97bc-193dc6904f3b" style="width:100%; height:100%; border:none;"></iframe>
+				<iframe
+					src="https://flowiseai-railway-production-3de9.up.railway.app/chatbot/e6703f06-6e20-4320-97bc-193dc6904f3b"
+					width="400"
+					height="480"
+					style="border-radius: 12px; border: none; background: #fff;"
+					allow="clipboard-write;"
+					title="Chatbot Nexo"
+				></iframe>
 			</div>
 	<div style="display: flex; flex-direction: column; gap: 16px; flex: 1; max-width: 420px; justify-content: flex-start; margin-top: -40px;">
 			<div class="testimonial">
@@ -266,69 +184,5 @@
 		</div>
 	</div>
 </div>
-<script type="module">
-	import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-	Chatbot.initFull({
-		chatflowid: "e6703f06-6e20-4320-97bc-193dc6904f3b",
-		apiHost: "https://flowiseai-railway-production-3de9.up.railway.app",
-		theme: {
-			chatWindow: {
-				height: '480px',
-				width: '400px',
-				showTitle: true,
-				showAgentMessages: true,
-				title: 'Nexo',
-				titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
-				welcomeMessage: 'Hola! Soy Nexo, preguntame lo que quieras saber sobre como puedo ayudar a tu inmobiliaria.',
-				errorMessage: 'This is a custom error message',
-				backgroundColor: '#ffffff',
-				fontSize: 16,
-				starterPrompts: ["", ""],
-				starterPromptFontSize: 15,
-				clearChatOnReload: false,
-				sourceDocsTitle: 'Sources:',
-				renderHTML: true,
-				botMessage: {
-					backgroundColor: '#f7f8ff',
-					textColor: '#303235',
-					showAvatar: true,
-					avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
-				},
-				userMessage: {
-					backgroundColor: '#3B81F6',
-					textColor: '#ffffff',
-					showAvatar: true,
-					avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
-				},
-				textInput: {
-					placeholder: 'Escribe tu pregunta',
-					backgroundColor: '#ffffff',
-					textColor: '#303235',
-					sendButtonColor: '#3B81F6',
-					maxChars: 50,
-					maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
-					autoFocus: true,
-					sendMessageSound: true,
-					sendSoundLocation: 'send_message.mp3',
-					receiveMessageSound: true,
-					receiveSoundLocation: 'receive_message.mp3'
-				},
-				feedback: {
-					color: '#303235'
-				},
-				dateTimeToggle: {
-					date: true,
-					time: true
-				},
-				footer: {
-					textColor: '#303235',
-					text: '',
-					company: 'IAFLOW',
-					companyLink: 'https://www.iaflow.co/'
-				}
-			}
-		}
-	})
-</script>
 </body>
 </html>
