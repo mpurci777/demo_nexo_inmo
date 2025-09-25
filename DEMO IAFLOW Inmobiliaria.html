@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IAFLOW · Demo interactiva</title>
+  <link rel="icon" href="https://iaflow.co/favicon.ico">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Analytics (reemplazá GA_MEASUREMENT_ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  <!--colores de la pagina-->
+ <style>
+    :root {
+      --bg: #a2a4fd;              /* fondo de la pagina */
+      --fg: #030200;           /* color texto principal */
+      --header-bg: #091261;       /* fondo del header */
+      --header-fg: #ff7b00;    /* texto del header */      
+      --cta-bg: #000000;       /* fondo de botones */  
+      --cta-fg: #fff;          /* texto de botones */  
+      --accent: #fff9f6;       /* color de acento */  
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --fg: #ececec;
+      --header-bg: #000;
+      --header-fg: #fafafa;
+      --cta-bg: #fafafa;
+      --cta-fg: #000;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      transition: background 0.3s, color 0.3s;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 16px; right: 16px;
+      background: var(--cta-bg);
+      color: var(--cta-fg);
+      border: none; padding: 8px;
+      border-radius: 4px; cursor: pointer;
+      font-size: 14px;
+    }
+    header {
+      background: var(--header-bg);
+      color: var(--header-fg);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 26px; font-weight: 600;
+    }
+    header p {
+      font-size: 16px; margin-top: 8px;
+      color: var(--accent);
+    }
+    .container {
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 0 20px;
+      animation: fadeIn 0.6s ease-in;
+    }
+    #demo p {
+      font-size: 16px; line-height: 1.6; margin-bottom: 20px;
+    }
+    .iframe-wrapper {
+      position: relative;
+      width: 100%; height: 600px;
+      border: 1px solid #ccc; border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .loader {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      border: 4px solid #eee;
+      border-top: 4px solid var(--accent);
+      border-radius: 50%;
+      width: 40px; height: 40px;
+      animation: spin 1s linear infinite;
+    }
+    iframe {
+      width: 100%; height: 100%; border: none;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 24px;
+      background-color: var(--cta-bg);
+      color: var(--cta-fg);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .cta:hover {
+      background-color: var(--accent);
+      color: #fff;
+    }
+    #testimonial {
+      margin: 60px 0;
+      padding: 20px;
+      background: #fff;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+    }
+    #testimonial p {
+      font-size: 15px; line-height: 1.5;
+    }
+    #testimonial span {
+      display: block;
+      margin-top: 12px;
+      font-size: 14px;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin: 60px 0 20px;
+    }
+    @keyframes spin {
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Cambiar tema</button>
+
+  <header>
+    <h1>IAFLOW · Demo interactiva</h1>
+    <p>IA aplicada a real estate. Sin fricción.</p>
+  </header>
+
+  <div class="container" id="demo">
+    <h2>Interactuá con Nexo</h2>
+    <p>Este asistente responde consultas, capta leads y automatiza seguimiento en tu inmobiliaria. Probalo y descubrí su potencial.</p>
+    <div class="iframe-wrapper">
+      <div class="loader" id="loader"></div>
+  <iframe src="https://flowiseai-railway-production-3de9.up.railway.app/chatbot/e6703f06-6e20-4320-97bc-193dc6904f3b"
+   onload="document.getElementById('loader').style.display='none'">
+</iframe>
+    </div>
+    <a class="cta" href="https://calendar.app.google/X8tMYUbMENdVL3Hj6">Agendá tu llamada</a>
+  </div>
+
+  <div class="container" id="testimonial">
+    <p>“En 48 h vimos un aumento del 30 % en leads cualificados. Nexo está listo para integrarse sin fricción.”</p>
+    <span>— Laura Martínez, Gestora en PropiedadesXYZ</span>
+  </div>
+
+  <footer>
+    © 2025 IAFLOW · <a href="https://iaflow.co">iaflow.co</a>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const current = root.getAttribute('data-theme');
+      root.setAttribute('data-theme', current === 'dark' ? '' : 'dark');
+    }
+  </script>
+</body>
+</html>
