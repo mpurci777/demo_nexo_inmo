@@ -1,0 +1,11 @@
+{
+  "name": "demo-nexo-inmo",
+  "version": "1.0.0",
+  "description": "Demo de chatbot para atención inmobiliaria",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build needed'"
+  },
+  "author": "IAFLOW",
+  "license": "MIT"
+}
